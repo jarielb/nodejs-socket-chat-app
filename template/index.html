@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IO Chat</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="main">
+    <div class="app-title">
+      <h1>Chat App</h1>
+      <p class="signout">Sign out</p>
+    </div>
+    <div class="chat-container">
+      <div class="chat-group">
+        <h3>Groups</h3>
+        <div class="group-list">
+          <a class="group-nav" href="/chat">
+            <p class="group">Chat</p>
+          </a>
+          <a class="group-nav" href="/news">
+            <p class="group">News</p>
+          </a>
+        </div>
+      </div>
+      <div class="login">
+        <div class="chat-input">
+            <div class="login-message">
+              <p class="msg-notice">Input username to begin chat.</p>
+            </div>
+            <form id="login-form">
+              <input placeholder="username" name="" id="login"></input>
+              <button type="submit">Start</button>
+            </form>
+          </div>
+      </div>
+      <div class="chat-room chat">
+        <h3>IO Chat</h3>
+        <div class="chat-main ">
+          <div class="chat-box">
+          </div>
+          <div class="chat-typing">
+            someone is typing...
+          </div>
+          <div class="chat-input">
+            <form id="chat-form" data-id="chat">
+              <textarea name="" id="composer" rows="2"></textarea>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="chat-room news">
+        <h3>IO News</h3>
+        <div class="chat-main ">
+          <div class="chat-box">
+          </div>
+          <div class="chat-input">
+            <form id="chat-form" data-id="news">
+              <textarea name="" id="composer" data-type="news" rows="2"></textarea>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="chat-online">
+        <h3>Online</h3>
+        <div class="user-list">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="script.js"></script>
+</html>
